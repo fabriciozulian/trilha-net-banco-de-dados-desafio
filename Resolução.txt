@@ -1,0 +1,47 @@
+Exercicio 1 query:
+
+SELECT Nome, Ano FROM Filmes WHERE Id < 15
+
+Exercicio 2 query:
+SELECT Nome, Ano, Duracao FROM Filmes WHERE Ano <= 1995 ORDER BY Ano
+
+Exercicio 3 query:
+SELECT Nome, Ano, Duracao FROM Filmes WHERE Nome = 'De Volta para o Futuro'
+
+Exercicio 4 query:
+SELECT Nome, Ano, Duracao FROM Filmes WHERE Ano = 1997
+
+Exercicio 5 query:
+SELECT Nome, Ano, Duracao FROM Filmes WHERE Ano >= 2001
+
+Exercicio 6 query:
+SELECT Nome, Ano, Duracao FROM Filmes WHERE Duracao >= 106 ORDER BY Duracao 
+
+Exercicio 7 query:
+SELECT Ano, COUNT(*) As Quantidade FROM Filmes GROUP BY Ano ORDER BY Quantidade Desc
+
+Exercicio 8 query:
+Select * From Atores WHERE Genero ='M'
+
+Exercicio 9 query:
+Select * From Atores WHERE Genero ='F'ORDER BY PrimeiroNome
+
+Exercicio 10 query:
+SELECT Filmes.Nome, Generos.Genero
+FROM Filmes
+INNER JOIN FilmesGenero ON Filmes.Id = FilmesGenero.IdFilme
+INNER JOIN Generos ON Generos.Id = FilmesGenero.IdGenero;
+
+
+Exercicio 11 query:
+SELECT Filmes.Nome, Generos.Genero
+FROM Filmes
+INNER JOIN FilmesGenero ON Filmes.Id = FilmesGenero.IdFilme
+INNER JOIN Generos ON Generos.Id = FilmesGenero.IdGenero
+WHERE Genero = 'Mistério';
+
+Exercicio 12 query:
+Select Filmes.Nome, Atores.PrimeiroNome, Atores.UltimoNome, ElencoFilme.Papel
+FROM Filmes
+INNER JOIN ElencoFilme ON Filmes.Id = ElencoFilme.IdFilme
+INNER JOIN Atores ON Atores.Id = ElencoFilme.Id;
